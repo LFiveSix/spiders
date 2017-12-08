@@ -90,7 +90,7 @@ def scrach_lianjia_for_location(page_begin, page_end):
 
 
 def main():
-    page_begin, page_end = 5, 500
+    page_begin, page_end = 1, 500
     scrach_lianjia_for_location(page_begin, page_end)
 
 
