@@ -53,7 +53,6 @@ def get_all_house_urls(url):
     for title in titles:
         title_link =title.get("href")
         title_links_list.append(title_link)
-    # print(title_links_list)
     return title_links_list
 
 
@@ -81,9 +80,7 @@ def save_location(fl_proxie):
 def scrach_lianjia_for_location(page_begin, page_end):
     urls = get_urls_for_page_index(page_begin, page_end)
     for url in urls:
-        print(url)
         title_links_list = get_all_house_urls(url)
-        print(title_links_list)
         fl_proxies = mul_get_verify_location(title_links_list)
         for fl_proxie in fl_proxies:
             save_location(fl_proxie)
